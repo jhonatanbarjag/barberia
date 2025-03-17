@@ -1,0 +1,30 @@
+.body{
+    background-color: black;
+}    
+
+    /* Imagen de fondo en pantalla completa */
+    .bg-image {
+        background-image: url('/img/barber.jpg'); /* Reemplaza con la ruta de tu imagen */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Ocupa el 100% de la pantalla */
+        width: 100%;
+    }
+
+    /* Navbar transparente */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.5); /* Negro con transparencia */
+    }
+
+    /* Color blanco para los enlaces del navbar */
+    .navbar .nav-link {
+        color: white !important;
+    }
+
+    /* Para que el navbar siempre esté arriba de la imagen */
+    .navbar.fixed-top {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
