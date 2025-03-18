@@ -77,12 +77,68 @@ button:hover {
     background-color: #1acfb1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Cambia a columna */
+        gap: 30px; /* Reduce el espacio entre elementos */
+        padding: 20px; /* Menos padding para evitar que se vea apretado */
     }
 
     .contact-info, .form-container {
         width: 100%;
+        text-align: center; /* Centrar contenido en pantallas pequeñas */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Reduce el tamaño del texto */
+    }
+
+    .form-container form {
+        max-width: 90%; /* Reduce el ancho del formulario */
+        margin: auto; /* Centra el formulario */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduce padding en pantallas muy pequeñas */
+    }
+
+    .contact-info h2, .form-container h2 {
+        font-size: 20px; /* Reduce tamaño del título */
+    }
+
+    .contact-info p {
+        font-size: 14px; /* Reduce más el texto en pantallas muy pequeñas */
+    }
+
+    input, textarea {
+        font-size: 14px; /* Ajusta el tamaño del texto en los campos */
+        padding: 8px; /* Reduce el padding */
+    }
+
+    button {
+        font-size: 16px; /* Ajusta el botón */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px; /* Reduce más el padding en móviles muy pequeños */
+    }
+
+    .contact-info p {
+        font-size: 13px; /* Texto más pequeño para que no ocupe mucho espacio */
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 6px; /* Reduce más el padding en los inputs */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
