@@ -1,30 +1,68 @@
-.body{
-    background-color: black;
-}    
+/* Asegura que la página ocupe toda la altura y elimina los márgenes */
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-    /* Imagen de fondo en pantalla completa */
-    .bg-image {
-        background-image: url('/img/barber.jpg'); /* Reemplaza con la ruta de tu imagen */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh; /* Ocupa el 100% de la pantalla */
-        width: 100%;
-    }
+/* Configura el body para que los elementos estén organizados en columna */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch; /* Hace que los elementos ocupen todo el ancho disponible */
+    padding-top: 70px; /* Compensa la altura del navbar fijo */
+}
 
-    /* Navbar transparente */
-    .navbar {
-        background-color: rgba(0, 0, 0, 0.5); /* Negro con transparencia */
-    }
+/* Establece una imagen de fondo de pantalla completa */
+.bg-image {
+    background-image: url('/img/salon.jpeg');
+    background-size: cover; /* Hace que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
 
-    /* Color blanco para los enlaces del navbar */
-    .navbar .nav-link {
-        color: white !important;
-    }
+/* Estilos para la barra de navegación */
+.navbar {
+    display: flex; /* Usa flexbox para organizar los elementos en fila */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con transparencia */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
 
-    /* Para que el navbar siempre esté arriba de la imagen */
-    .navbar.fixed-top {
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
+/* Estilos para la lista del menú de navegación */
+.navbar ul {
+    display: flex; /* Organiza los elementos del menú en fila */
+    gap: 20px; /* Agrega espacio entre los elementos */
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de los enlaces de navegación */
+.navbar .nav-link {
+    color: white !important; /* Fuerza el color blanco en los enlaces */
+}
+
+/* Cambia el color del enlace cuando el mouse pasa por encima */
+.navbar .nav-link:hover {
+    color: #155aa0 !important; /* Azul oscuro */
+}
+
+/* Estiliza la imagen del logo en la barra de navegación */
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Evita la distorsión de la imagen */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
+/* Hace que la barra de navegación sea fija en la parte superior */
+.navbar.fixed-top {
+    position: fixed; /* Fija el navbar en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Lo mantiene por encima de otros elementos */
+}
